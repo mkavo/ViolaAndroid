@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0.8" package="se.su.sub.viola" android:installLocation="auto" android:versionCode="9">
+  <uses-sdk android:minSdkVersion="15" />
+  <application android:label="Viola" android:icon="@drawable/starticonviola" android:debuggable="true" android:name="mono.android.app.Application">
+    <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md5fc56b8760c18b2f98660f5a457f4705b.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5fc56b8760c18b2f98660f5a457f4705b.Activity1" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5fc56b8760c18b2f98660f5a457f4705b.CallSlipDetailsActivity" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5fc56b8760c18b2f98660f5a457f4705b.FetchCallSlips" />
+    <activity android:label="" android:screenOrientation="portrait" android:name="md5fc56b8760c18b2f98660f5a457f4705b.ReportFetch" />
+    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="md5e1d4744ef128cd013cac92521f1a8e76.ZxingActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="se.su.sub.viola.mono.MonoRuntimeProvider.__mono_init__" />
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.se.su.sub.viola" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.NFC" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

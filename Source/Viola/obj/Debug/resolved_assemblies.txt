@@ -1,0 +1,5 @@
+C:\Users\rcede\Source\Workspaces\Viola Android\Viola\Viola\bin\Debug\Viola.dll
+C:\Users\rcede\Source\Workspaces\Viola Android\Viola\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll
+C:\Users\rcede\Source\Workspaces\Viola Android\Viola\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll
+C:\Users\rcede\Source\Workspaces\Viola Android\Viola\Components\zxing.net.mobile-1.4.7.2\lib\android\zxing.monoandroid.dll
+C:\Users\rcede\Source\Workspaces\Viola Android\Viola\Components\zxing.net.mobile-1.4.7.2\lib\android\ZXing.Net.Mobile.dll
