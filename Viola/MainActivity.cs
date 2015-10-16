@@ -57,6 +57,10 @@ namespace Viola
             if (!_isLoggedIn)
             {
                 var loginActivity = new Intent(this, typeof (LogIn));
+
+                loginActivity.AddFlags(ActivityFlags.ClearTop);
+                loginActivity.AddFlags(ActivityFlags.NewTask);
+                loginActivity.AddFlags(ActivityFlags.ClearTask);
                 StartActivity(loginActivity);
             }
             else
@@ -66,6 +70,9 @@ namespace Viola
 
                 SetContentView(Resource.Layout.CallSlipFetchingRequest);
                 var fetchinrequest = new Intent(this, typeof (CallSlipFetchingRequest));
+                fetchinrequest.AddFlags(ActivityFlags.ClearTop);
+                fetchinrequest.AddFlags(ActivityFlags.NewTask);
+                fetchinrequest.AddFlags(ActivityFlags.ClearTask);
                 StartActivity(fetchinrequest);
             }        
         }
@@ -93,9 +100,11 @@ namespace Viola
                     {
                         Button buttonCallLogOut = FindViewById<Button>(Resource.Id.callLogOutButton);
                         var logoutActivity = new Intent(this, typeof(LogOut));
+                            logoutActivity.AddFlags(ActivityFlags.ClearTop);
+                            logoutActivity.AddFlags(ActivityFlags.NewTask);
+                            logoutActivity.AddFlags(ActivityFlags.ClearTask);
                         StartActivity(logoutActivity);
-                        //StartActivityForResult(logoutActivity, 0);
-                        //Toast.MakeText(this, "Det saknas Internetåtkomst", ToastLength.Long).Show();
+                        
                         break;
                     }
 
@@ -105,8 +114,11 @@ namespace Viola
                                 if (HasInternetConnection)
                                 {
                                     var fetchCallSlipsActivity = new Intent(this, typeof (CallSlipFetchingRequest));
+                                        fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTop);
+                                        fetchCallSlipsActivity.AddFlags(ActivityFlags.NewTask);
+                                        fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTask);
                                     StartActivity(fetchCallSlipsActivity);
-                                    //StartActivityForResult(fetchCallSlipsActivity, 1);
+                                    
                                 }
                                 else
                                 {
@@ -122,6 +134,9 @@ namespace Viola
                         if (HasInternetConnection)
                         {
                             var callSlipBeforeReportFetchActivity = new Intent(this, typeof(CallSlipBeforeReport));
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTop);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.NewTask);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTask);
                             StartActivity(callSlipBeforeReportFetchActivity);
                         }
                         else
@@ -148,6 +163,6 @@ namespace Viola
                 return connectivityManager.ActiveNetworkInfo != null && connectivityManager.ActiveNetworkInfo.IsConnectedOrConnecting;
             }
         }
-      
-	}
+
+}
 }

@@ -28,6 +28,7 @@ namespace Viola
              SetContentView(Resource.Layout.login);
              string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
              _filepath = Path.Combine(path, "CallSlips.txt");
+
              Button buttonLogin = FindViewById<Button>(Resource.Id.buttonLogin);
              buttonLogin.Click += HandleButtonLoginClick;
              var storedUserName = prefs.GetString("UserName", "");
@@ -86,12 +87,18 @@ namespace Viola
                  if (success)
                  {
                      var fetchinrequest = new Intent(this, typeof(CallSlipFetchingRequest));
+                         fetchinrequest.AddFlags(ActivityFlags.ClearTop);
+                         fetchinrequest.AddFlags(ActivityFlags.NewTask);
+                         fetchinrequest.AddFlags(ActivityFlags.ClearTask);
                      StartActivity(fetchinrequest);
                  }
                  else
                  {
                      var loginActivity = new Intent(this, typeof(LogIn));
-                     StartActivity(loginActivity);
+                         loginActivity.AddFlags(ActivityFlags.ClearTop);
+                         loginActivity.AddFlags(ActivityFlags.NewTask);
+                         loginActivity.AddFlags(ActivityFlags.ClearTask);
+                    StartActivity(loginActivity);
                  }
              }
          }

@@ -32,7 +32,6 @@ namespace Viola
             ClearApplicationData(this);
             clearAndExit(this);
             OnDestroy();
-            //base.OnResume();
             var prefs = Application.Context.GetSharedPreferences("Violadev", FileCreationMode.Private);         
             var prefEditor = prefs.Edit();
             prefEditor.PutBoolean("Authorized", false);
@@ -100,22 +99,5 @@ namespace Viola
 
             return dir.Delete();
         }
-
-        //public  void trimCache(Context contex)
-        //{
-        //    try
-        //    {
-        //       Java.IO.File f = base.CacheDir.AbsoluteFile;
-        //        string path = contex.CacheDir.AbsolutePath;
-        //        if (path != null)
-        //        {
-        //            deleteDir(path);
-        //        }
-        //    }
-        //    catch (System.Exception e)
-        //    {
-        //        Toast.MakeText(this, "Fel: " + e.Message + e.StackTrace, ToastLength.Long).Show();
-        //    }
-        //}
     }
 }

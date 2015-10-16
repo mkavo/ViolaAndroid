@@ -54,6 +54,9 @@ namespace Viola
             else
             {
                 var loginActivity = new Intent(this, typeof(LogIn));
+                    loginActivity.AddFlags(ActivityFlags.ClearTop);
+                    loginActivity.AddFlags(ActivityFlags.NewTask);
+                    loginActivity.AddFlags(ActivityFlags.ClearTask);
                 StartActivity(loginActivity);
             }
 			
@@ -66,10 +69,7 @@ namespace Viola
             var prefs = Application.Context.GetSharedPreferences("Violadev", FileCreationMode.Private);
             var prefEditor = prefs.Edit();
             var progressDialog = ProgressDialog.Show(this, "VÅ‰nta...", "Å≈terrapporterar plocklista", true);
-            //var mainActivity = new Intent(this, typeof(MainActivity));
             SetContentView(Resource.Layout.Main);
-            var repportMessage = new Intent(this, typeof(CallSlipRapportMessage));
-            
 
             try
             {
@@ -108,6 +108,10 @@ namespace Viola
             finally
             {
                 progressDialog.Hide();
+                var repportMessage = new Intent(this, typeof(CallSlipRapportMessage));
+                    repportMessage.AddFlags(ActivityFlags.ClearTop);
+                    repportMessage.AddFlags(ActivityFlags.NewTask);
+                    repportMessage.AddFlags(ActivityFlags.ClearTask);
                 StartActivity(repportMessage);
             }
         }

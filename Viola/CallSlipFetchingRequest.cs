@@ -18,7 +18,6 @@ namespace Viola
     [Activity(Label = "", ScreenOrientation = ScreenOrientation.Portrait)]
     public class CallSlipFetchingRequest : Activity
     {
-        private bool _isLoggedIn;
         string _filepath;
         private ListView _callSlipView;
 
@@ -36,11 +35,9 @@ namespace Viola
             TextView wrap1 = FindViewById<TextView>(Resource.Id.textView10);
             TextView textView12 = FindViewById<TextView>(Resource.Id.textView12);
             TextView textView13 = FindViewById<TextView>(Resource.Id.textView13);
-            //TextView wrap2 = FindViewById<TextView>(Resource.Id.textView11);
             ImageView logo = FindViewById<ImageView>(Resource.Id.image1);
 
-            Message a = new Message();
-            //a.WriteToParcel();
+           
             if (File.Exists(_filepath))
             {
                 logo.Visibility = ViewStates.Gone;
@@ -75,6 +72,9 @@ namespace Viola
             if (System.IO.File.Exists(_filepath)  && _filepath  != null)
             {
                 var fetchCallSlipsActivity = new Intent(this, typeof(FetchCallSlips));
+                    fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTop);
+                    fetchCallSlipsActivity.AddFlags(ActivityFlags.NewTask);
+                    fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTask);
                 StartActivity(fetchCallSlipsActivity);
             }
             else
@@ -90,6 +90,9 @@ namespace Viola
             _filepath = Path.Combine(path, "CallSlips.txt");
             File.Delete(_filepath);
             var fetchCallSlipsActivity = new Intent(this, typeof(FetchCallSlips));
+                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTop);
+                fetchCallSlipsActivity.AddFlags(ActivityFlags.NewTask);
+                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTask);
             StartActivity(fetchCallSlipsActivity);
         }
 
@@ -116,9 +119,10 @@ namespace Viola
                     {
                         Button buttonCallLogOut = FindViewById<Button>(Resource.Id.callLogOutButton);
                         var logoutActivity = new Intent(this, typeof(LogOut));
+                            logoutActivity.AddFlags(ActivityFlags.ClearTop);
+                            logoutActivity.AddFlags(ActivityFlags.NewTask);
+                            logoutActivity.AddFlags(ActivityFlags.ClearTask);
                         StartActivity(logoutActivity);
-                        //StartActivityForResult(logoutActivity, 0);
-                        //Toast.MakeText(this, "Det saknas Internetåtkomst", ToastLength.Long).Show();
                         break;
                     }
 
@@ -131,6 +135,9 @@ namespace Viola
                             _filepath = Path.Combine(path, "CallSlips.txt");
                             File.Delete(_filepath);
                             var fetchCallSlipsActivity = new Intent(this, typeof(FetchCallSlips));
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTop);
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.NewTask);
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTask);
                             StartActivity(fetchCallSlipsActivity);
                             
                         }
@@ -148,6 +155,9 @@ namespace Viola
                         if (HasInternetConnection)
                         {
                             var callSlipBeforeReportFetchActivity = new Intent(this, typeof(CallSlipBeforeReport));
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTop);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.NewTask);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTask);
                             StartActivity(callSlipBeforeReportFetchActivity);
                             
                         }

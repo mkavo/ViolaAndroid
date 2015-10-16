@@ -26,7 +26,6 @@ namespace Viola
         int _numberOfCallSlips;
         IEnumerable<CallSLipWithLocation> _callSlipsToFetch;
         string _filepath;
-
         Button _previousButton;
         Button _nextButton;
         Button _needsLookupButton;
@@ -381,6 +380,9 @@ namespace Viola
                     {
                         Button buttonCallLogOut = FindViewById<Button>(Resource.Id.callLogOutButton);
                         var logoutActivity = new Intent(this, typeof(LogOut));
+                            logoutActivity.AddFlags(ActivityFlags.ClearTop);
+                            logoutActivity.AddFlags(ActivityFlags.NewTask);
+                            logoutActivity.AddFlags(ActivityFlags.ClearTask);
                         StartActivity(logoutActivity);
                         break;
                     }
@@ -394,6 +396,9 @@ namespace Viola
                             _filepath = Path.Combine(path, "CallSlips.txt");
                             File.Delete(_filepath);
                             var fetchCallSlipsActivity = new Intent(this, typeof(FetchCallSlips));
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTop);
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.NewTask);
+                                fetchCallSlipsActivity.AddFlags(ActivityFlags.ClearTask);
                             StartActivity(fetchCallSlipsActivity);
                         }
                         else
@@ -410,6 +415,9 @@ namespace Viola
                         if (HasInternetConnection)
                         {
                             var callSlipBeforeReportFetchActivity = new Intent(this, typeof(CallSlipBeforeReport));
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTop);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.NewTask);
+                                callSlipBeforeReportFetchActivity.AddFlags(ActivityFlags.ClearTask);
                             StartActivity(callSlipBeforeReportFetchActivity);
                         }
                         else
