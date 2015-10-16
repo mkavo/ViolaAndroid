@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/MainBackground">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tint="#55ff0000"
+        android:src="@drawable/logo"
+        android:id="@+id/image1"
+        android:visibility="gone" />
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:visibility="gone" />
+    <TextView
+        android:text="@string/message"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/black" />
+<!-- android:visibility = visible/gone/invisible -->
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:visibility="gone" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/ViolaBtnDraw"
+            android:text="@string/Ja"
+            android:id="@+id/fetchCallSlipsFromFileButton"
+            style="@style/ViolaBtn" />
+    </LinearLayout>
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/textView12" />
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/textView13" />
+    <TextView
+        android:text="@string/wrapDash"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/ViolaBtnDraw"
+            android:text="@string/fetchNewCallSlips"
+            android:id="@+id/fetchNewCallSlipsButton"
+            style="@style/ViolaBtn" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item android:id="@+id/MainMenu"
+      android:showAsAction="always"
+      android:title="Välj"
+      android:text="Välj">
+      <menu android:id="@+id/submenu">
+        <item android:id="@+id/callLogOutButton"              
+              android:title="Logga ut"/>
+        <item android:id="@+id/fetchCallSlipsButton"              
+              android:title="Plocklista"/>
+        <item android:id="@+id/reportFetchButton"              
+              android:title="Återrapportera"/> 
+      </menu>
+</item>
+</menu>

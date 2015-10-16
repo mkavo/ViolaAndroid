@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0.8" package="se.su.sub.viola" android:installLocation="auto" android:versionCode="9">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="18" />
+	<application android:label="Viola" android:icon="@drawable/StartIconViola"></application>
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.FLASHLIGHT" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+</manifest>

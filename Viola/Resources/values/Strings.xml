@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="reportcollecting">Återrapportering</string>
+	<string name="yearvolumeissue">Årtal volym nummer</string>
+	<string name="callSlipDetails">Hantera beställning</string>
+	<string name="app_name">Viola</string>
+	<string name="printslip">Skriv ut slip</string>	
+	<string name="releaseunfetcheddialoguetitle">Släppa ej hämtade?</string>		
+	<string name="releaseunfetcheddialoguemessage">Vill du att de beställningar du inte hämtat skall släppas, tryck Ja, vill du spara dem till nästa hämtning, tryck Nej</string>
+  <string name="viola">Viola</string>
+  <string name="username">Användarnamn (utan Intranet)"</string>
+	<string name="password">Lösenord</string>
+	<string name="loginbutton">Logga in</string>	
+	<string name="readtag">Chip</string>	
+	<string name="title">Titel</string>	
+	<string name="area">Plockområde</string>
+  <string name="seriesStatement">Serietitel</string>
+	<string name="callnumber">Hylla</string>
+  <string name="back">Tillbaka</string>
+	<string name="next">Nästa</string>	
+	<string name="readBarcode">Streckkod</string>	
+	<string name="needslookup">Skall slås</string>	
+	<string name="previous">Föregående</string>	
+	<string name="found">Finns</string>
+  <string name="status">Status</string>
+  <string name="type">Typ</string>
+  <string name="ExternalNote">Anteckning</string>
+	<string name="barcode">Streckkod</string>	
+	<string name="fetchcallslips">Hämta plocklista</string>
+  <string name="message"><b> Du har ej åtterrapporterad lista kvar i  telefonen, vill du titta på den?</b></string>
+  <string name="Ja">Ja</string>
+  <string name="wrap">  </string>
+  <string name="wrapDash">*********************************************</string>
+  <string name="fetchNewCallSlips">Hämta ny plocklista>></string>
+  <string name="missingInternetConnection">Saknar nätverk</string>
+	<string name="printslipmodel">^XA^MNN^LL1480^FS^LH30,200^FO20,50^AE,21,10^FH^FD{0}^FS ^FO20,100^AE,21,10^FH^FD{1}^FS^FO20,200^AE,21,10^FH^FD{2}^FS^FB700,4^FO20,300^AD,36,20^FH^FD{3}^FS ^FO20,500^AE,21,10^FH^FD{4}^FS ^FO20,700^AE,21,10^FH^FD{5}^FS ^FO20,800^AE,21,10^FH^FD{6}^FS ^FO20,900^AE,21,10^FD{7}^FS ^FO20,1000^BCN,100,Y,N,N^FD{8}^FS^FB700,4^FO20,1160^AE,21,10^FH^FD{9}^FS ^FO20,1260^AE,21,10^FH^FD{10}^FS ^XZ</string>
+  <string name="phoneCommunicationUrl">https://violadev.sub.su.se/</string>
+  <string name="phoneCommunicationUrlText">Dela</string> <!-- Violas url-->
+  <string name="RaportBack">Återrapportera plocklista</string>
+  <string name="treatedposterAll">_Alla poster genomförda .....</string>
+  <string name="treatedposterNotAll">_Du har icke genomförda poster, vill du ändå återrapportera?</string>
+</resources>

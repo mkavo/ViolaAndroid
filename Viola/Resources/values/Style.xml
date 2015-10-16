@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+  <style name="MainBackground">
+    <item name="android:background">#EEEEEE</item>
+  </style>
+  <style name="ViolaBtn">
+    <item name="android:background">#1f8670</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_margin">5dp</item>
+    <item name="android:layout_width">0dip</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">1</item>
+    <item name="android:shadowDy">1</item>
+    <item name="android:shadowRadius">6</item>
+  </style>
+  <style name="ViolaBtnSmall">
+    <item name="android:background">#1f8670</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_margin">5dp</item>
+    <item name="android:layout_width">0dip</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">1</item>
+    <item name="android:shadowDy">1</item>
+  </style>
+</resources>

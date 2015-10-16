@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/MainBackground">
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/textView12" />
+    <TextView
+        android:text="@string/treatedposterAll"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poster_alla"
+        android:visibility="visible"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:text="@string/treatedposterNotAll"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poster_ej_alla"
+        android:visibility="visible"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:text="@string/wrap"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/textView12" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/ViolaBtnDraw"
+            android:text="@string/RaportBack"
+            android:id="@+id/RaportBackBtn"
+            style="@style/ViolaBtn" />
+    </LinearLayout>
+</LinearLayout>
